@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Problemset</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- MATHJAX -->
+	<script src="../src/js/mathjax-options.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../src/css/main.css">
+	<link rel="stylesheet" href="../src/css/problemset.css">
+	<style>
+		:root {
+			--meeting-number: "Pertemuan 26";
+			--question-count: "12 butir";
+			--time: "40 menit";
+			--problemset-number: "Latihan 22";
+			--date: "1 Maret 2026";
+		}
+	</style>
+
+	<!-- JS -->
+	<script src="../src/js/problemset.js" defer></script>
+</head>
+<body>
+	<header>
+		<p class="number" id="meeting-number"></p>
+		<table>
+			<tr>
+				<td>Jumlah Soal</td><td id="question-count"></td>
+				<td>Nama</td><td></td>
+			</tr>
+			<tr>
+				<td>Waktu Pengerjaan</td><td id="time"></td>
+				<td>Kelas</td><td></td>
+			</tr>
+		</table>
+	</header>
+
+	<h1>Soal 1–3<br>Pesta Bambu</h1>
+
+	<p>Di sebuah hutan bambu di Tiongkok saat perayaan Imlek, seekor panda lucu ingin menyusun bambu-bambu favoritnya menjadi segitiga keberuntungan. Bambu favoritnya ini berbeda-beda warna dengan panjang berbeda-beda.</p>
+
+	<p>Sebuah kelompok bambu tersebut disebut dapat dibuat menjadi segitiga keberuntungan jika tiga bambu di dalam kelompok itu bisa membentuk segitiga. Artinya, untuk tiga panjang $(x, y, z)$ dengan nilai yang terbesar $z$ memenuhi $x + y > z$.</p>
+
+	<p>Panda lucu ini ingin membagi deretan bambu menjadi beberapa kelompok segitiga keberuntungan.</p>
+
+	<p class="question tof">Panda lucu memiliki bambu dengan panjang 5, 1, 2, 9, 25, dan 14. Apakah panda lucu dapat membuat setidaknya satu segitiga keberuntungan?</p>
+
+	<p class="question">Pada musim kering tiba, bambu-bambu panda semakin sedikit sehingga hanya tersisa 3 buah bambu favorit dengan panjang 17, 8, dan $x$. Jika $a$ adalah nilai terkecil yang mungkin untuk $x$ dan $b$ adalah nilai terbesar yang mungkin untuk $x$, tentukan nilai dari $a + b$.</p>
+
+	<p class="question">Pada musim bambu tiba, panda punya lebih banyak bambu. Sekarang ia mempunyai beberapa bambu dengan panjang 4, 6, 7, 8, 10, 12, 14, 16, 19, 20, 21, dan 30. Tentukan ada berapa banyak segitiga keberuntungan yang dapat dibuat.</p>
+
+	<h1>Soal 4–6<br>Takjil Spesial</h1>
+
+	<p>Di meja masjid ada takjil berbentuk grid $n \times m$ ($n$ barus dan $m$ kolom). Ada satu takjil spesial yang awalnya ada di petak tertentu $(a, b)$: baris ke-$a$, kolom ke-$b$.</p>
+
+	<p>Dua panitia bermain. Ustaz Falsé ingin permainan berakhir secepatnya. Sedangkan Ustaz Maaf ingin permainan berakhir selama mungkin.</p>
+
+	<p>Pada setiap ronde:</p>
+
+	<ul>
+		<li>Ustaz Falsé dapat memotong grid menjadi dua bagian, secara horizontal atau vertikal. Meja menjadi dua bagian: bagian yang tidak memiliki takjil spesial bisa langsung dibagikan kepada jemaah.</li>
+		<li>Setelah dipotong, tentunya ukuran grid akan berubah, dan posisi takjil spesial akan berubah relatif dengan grid baru.</li>
+		<li>Ustaz Maaf dapat menukar posisi takjil spesial dan takjil biasa.</li>
+	</ul>
+
+	<p>Permainan akan selesai saat ukuran grid menjadi $1 \times 1$ di mana hanya takjil spesial yang tersisa.</p>
+
+	<p class="question">Terdapat grid dengan ukuran $6 \times 8$ dan posisi takjil spesial pada petak $(3, 4)$. Jika Ustaz Falsé memotong grid secara horizontal di antara baris ke-3 dan ke-4. Berapa banyak takjil biasa yang tersisa?</p>
+
+	<p class="question">Terdapat grid dengan ukuran $3 \times 3$, dengan posisi takjil spesial berada pada petak $(2, 2)$. Berapa ronde permainan akan berjalan jika Ustaz Falsé dan Ustaz Maaf bermain secara optimal?</p>
+
+	<p class="question">Terdapat grid dengan ukuran $22 \times 99$, dengan posisi takjil spesial pada petak $(20, 70)$. Berapa ronde permainan akan berjalan jika Ustaz Falsé dan Ustaz Maaf bermain secara optimal?</p>
+
+	<h1>Soal 7–8<br>Dua Perulangan</h1>
+
+	<p>Perhatikan kode berikut.</p>
+
+	<pre><code>#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+int main() {
+	int n = 5;
+	int x[n];
+
+	// Perulangan pertama.
+	for (int i = 0; i &lt;= n; i++)
+		x[i - 1] = (2 * n) / i;
+
+	// Perulangan kedua.
+	for (int i = n - 1; i &gt;= 1; i--)
+		x[n - 1] = x[n - 1] + x[i - 1];
+
+	cout &lt;&lt; x[n - 1] &lt;&lt; endl;
+	return 0;
+}</code></pre>
+
+	<p class="question">Berapa nilai $\mathtt{x}[3]$ setelah <em>Perulangan pertama</em> selesai?</p>
+
+	<p class="question">Berapa nilai $\mathtt{x}[3]$ setelah <em>Perulangan kedua</em> selesai?</p>
+
+	<p class="question">Apa keluaran dari program tersebut?</p>
+
+	<h1>Soal 10–12<br>Proses</h1>
+
+	<p>Perhatikan kode berikut</p>
+
+	<pre><code>int proses(int a, int b) {
+	if (a &lt;= 0)
+		return b;
+
+	int sum = 0;
+	for (int i = 1; i &lt;= b; i++) {
+		if ((a + i) % 2 == 0)
+			sum += i;
+		else
+			sum -= o;
+	}
+
+	return proses(a - b, b + 1) + sum;
+}</code></pre>
+
+	<p class="question">Berapa nilai akhir $\mathtt{sum}$ pada pemanggilan pertama $\mathtt{proses}(10, 2)$?</p>
+
+	<p class="question">Berapa hasil akhir pemanggilan $\mathtt{proses}(10, 2)$?</p>
+
+	<p class="question">Berapa hasil akhir pemanggilan $\mathtt{proses}(1000, 1)$?</p>
+</body>
+</html>

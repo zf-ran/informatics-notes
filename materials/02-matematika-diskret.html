@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Material</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- MATHJAX -->
+	<script src="../src/js/mathjax-options.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../src/css/main.css">
+	<link rel="stylesheet" href="../src/css/material.css">
+	<style>
+		:root {
+			--chapter-number: "2";
+			--chapter: "Chapter 2";
+			--title: "Matematika Diskret";
+		}
+	</style>
+
+	<!-- JS -->
+	<script src="../src/js/material.js" defer></script>
+</head>
+<body>
+	<header>
+		<p id="chapter"></p>
+		<p id="title"></p>
+	</header>
+
+	<!-- TODO -->
+
+	<p>Matematika diskret adalah cabang matematika yang mempelajari objek matematika yang dapat dihitung (<em>countable</em>), semisal bilangan-bilangan bulat (<em>integers</em>), graf, logika proposisi. Matematika diskret <strong>tidak</strong> menyentuh bilangan riil, kalkulus, trogonometri, dan lain-lain.</p>
+
+	<h1>Bilangan Prima</h1>
+
+	<blockquote>
+		<p data-statement="definisi">Bilangan prima adalah bilangan asli yang tepat memiliki dua faktor, yaitu 1 dan dirinya sendiri: 2, 3, 5, 7, ….</p>
+	</blockquote>
+
+	<h2>Sifat-Sifat Bilangan Prima</h2>
+
+	<p>Dari pengertian tersebut, dapat diturunkan sifat-sifat berikut. Misalkan $p$ adalah bilangan prima.</p>
+
+	<blockquote>
+		<p data-statement="lemma"><em>Lemma Euklid.</em> Jika $p$ habis membagi $ab$, maka $p$ habis membagi $a$ <em>atau</em> habis membagi $b$ untuk bilangan bulat $a$ dan $b$.</p>
+	</blockquote>
+
+	<p><em>Atau</em> yang dimaksud adalah OR, bukan XOR. Bisa saja $p$ habis membagi $a$ dan $b$. Bisa saja hanya membagi $a$ atau $b$, tidak keduanya.</p>
+
+	<p>Sebagai contoh, 3 habis membagi 54, 3 habis membagi 6 dan 3 habis membagi 9. Contoh lainnya, 5 habis membagi 20, 5 habis membagi 5, tapi tidak habis membagi 4.</p>
+
+	<blockquote>
+		<p data-statement="korolari">Jika $p$ habis membagi $a^n$, maka $p$ habis membagi $a$ untuk bilangan bulat $a$ dan bilangan bulat tak negatif $n$.</p>
+	</blockquote>
+
+	<p>Contoh, 3 habis membagi $6^4$, maka 3 habis membagi 6.</p>
+
+	<blockquote>
+		<p data-statement="teorema"><em>Teorema Bertrand–Chebyshev.</em> Untuk bilangan bulat $n > 1$, terdapat setidaknya satu bilangan prima $p$ sehingga $n < p < 2n$.</p>
+	</blockquote>
+
+	<p>Teorema ini jarang digunakan pada soal-soal. Untuk bacaan lanjutan, silakan ke <a href="https://en.wikipedia.org/wiki/Bertrand%27s_postulate"><em>Bertrand’s postulate</em></a>. Dari teorema di atas dapat diturunkan sifat berikut.</p>
+
+	<blockquote>
+		<p data-statement="korolari">Misalkan $p_k$ adalah bilangan prima ke-$k$. Untuk setiap bilangan asli $n$, $p_{n+1} < 2p_n$.</p>
+	</blockquote>
+
+	<p>Untuk setiap bilangan prima, bilangan tersebut pasti kurang dari dua kali bilangan prima sebelumnya.</p>
+
+	<h2>Pengecekan Bilangan Prima</h2>
+
+	<p>Pada soal-soal, terkadang kita perlu menentukan suatu bilangan $n$ prima atau bukan. Cara pertama yang mungkin terpikir adalah mengecek dari 2 sampai $n - 1$. Jika ada bilangan di rentang tersebut yang habis membagi $n$, maka $n$ bukan prima.</p>
+
+	<p>Namun dengan cara tersebut, jika $n > 20$ jelas akan lama menghitung dengan kertas maupun dengan komputer. Ternyata, cukup cek hingga $\sqrt{n}$ saja. Kenapa? Karena faktor suatu bilangan pasti berpasangan. Misalkan $n = ab$, maka salah satu dari $a$ dan $b$ akan kurang dari $\sqrt{n}$ dan yang lainnya lebih dari $\sqrt{n}$. Jika keduanya lebih besar dari $\sqrt{n}$, tentu $ab > \sqrt{n}\sqrt{n}$. Hal ini berkontradiksi dengan $n = ab$</p>
+
+	<p>Contoh implementasinya pada kode di bawah.</p>
+
+<pre><code>bool is_prime(int n) {
+	if (n &lt;= 1)
+		return false;
+
+	int root = sqrt(n);
+
+	for (int i = 2; i &lt; root; i++)
+		if (n % i == 0)
+			return false;
+
+	return true;
+}</code></pre>
+
+	<h2>Mencari Bilangan Prima: <em>Sieve of Eratosthenes</em></h2>
+
+	<p><em>Sieve of Eratosthenes</em> digunakan untuk mencari bilangan-bilangan prima pada rentang 1 sampai $n$.</p>
+
+	<p>[Masih dalam tahap pengerjaan]</p>
+</body>
+</html>

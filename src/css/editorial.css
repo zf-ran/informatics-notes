@@ -1,0 +1,18 @@
+section.question-wrapper {
+	border: 1px solid black;
+	padding-inline: 4pt;
+	margin-block: 1em .5em;
+}
+
+p.question {
+	margin-block-start: 0;
+}
+
+p.answer {
+	text-indent: 0;
+}
+
+p.answer::before {
+	content: "Jawaban: ";
+	font-weight: bold;
+}

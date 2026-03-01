@@ -1,0 +1,158 @@
+body {
+	counter-reset: question;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-block-end: 4pt;
+}
+
+h1 {
+	text-align: center;
+	line-height: 1;
+	margin-block-start: 1em;
+	margin-block-end: 1em;
+}
+h1:not(:first-of-type) {
+	page-break-before: always;
+}
+h1::before {
+	display: block;
+}
+
+h2 {
+	font-weight: bold;
+}
+
+p.question {
+	text-indent: 0;
+	margin-block-start: 1em;
+}
+p.question::before {
+	display: inline-block;
+	counter-increment: question;
+	content: "Soal " counter(question) ".";
+	margin-right: 4pt;
+	font-weight: bold;
+}
+
+ol.mcq {
+	list-style-type: none;
+	counter-reset: mcq;
+}
+
+ol.mcq li {
+	position: relative;
+}
+
+ol.mcq li::before {
+	counter-increment: mcq;
+	content: "(" counter(mcq, upper-latin) ")";
+	position: absolute;
+	left: -4pt;
+	transform: translateX(-100%);
+}
+
+ul.cmcq {
+	list-style-type: none;
+}
+
+ul.cmcq li {
+	position: relative;
+}
+
+ul.cmcq li::before {
+	content: "";
+	position: absolute;
+	margin-right: 4pt;
+	width: 8px; height: 8px;
+	border: 1px solid black;
+	left: -4pt;
+	transform: translateX(-100%);
+	align-self: center;
+}
+
+ul.cmcq li[answer]::before {
+	background-color: black;
+}
+
+header {
+	width: 100%;
+	line-height: 100%;
+}
+
+header .number {
+	text-align: right;
+}
+
+header table {
+	width: 100%;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+
+header td:nth-child(2n+1) {
+	font-weight: bold;
+}
+
+header td:nth-child(1) {
+	width: 30%;
+}
+header td:nth-child(2) {
+	width: 20%;
+}
+
+@media not print {
+	h1 {
+		margin-block-end: 1em;
+	}
+}
+
+@page {
+	@top-left {
+		content: var(--question-count);
+		border-bottom: 1px solid black;
+		height: fit-content;
+		margin-bottom: 1em;
+	}
+
+	@top-right {
+		content: var(--time);
+		border-bottom: 1px solid black;
+		height: fit-content;
+		margin-bottom: 1em;
+	}
+
+	@bottom-left {
+		content: var(--problemset-number);
+		font-weight: bold;
+		border-top: 1px solid black;
+		height: fit-content;
+		margin-top: 1em;
+	}
+
+	@bottom-center {
+		content: var(--date);
+		border-top: 1px solid black;
+		height: fit-content;
+		margin-top: 1em;
+	}
+
+	@bottom-right {
+		content: "Halaman " counter(page) " dari " counter(pages);
+		border-top: 1px solid black;
+		height: fit-content;
+		margin-top: 1em;
+	}
+}
+
+@page :first {
+	@top-left {
+		content: "";
+		border: none;
+	}
+
+	@top-right {
+		content: "";
+		border: none;
+	}
+}

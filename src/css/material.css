@@ -1,0 +1,104 @@
+:root {
+	--font-family--title: "Helvetica Condensed";
+}
+
+body {
+	counter-reset: h1 statement;
+}
+
+h1 { counter-reset: h2; }
+h2 { counter-reset: h3; }
+
+h1::before {
+	counter-increment: h1;
+	content: counter(h1, upper-latin) ".";
+	display: inline-block;
+	margin-right: 4pt;
+}
+
+h2::before {
+	counter-increment: h2;
+	content: counter(h1, upper-latin) "." counter(h2) ".";
+	display: inline-block;
+	margin-right: 4pt;
+}
+
+h3::before {
+	counter-increment: h3;
+	content: counter(h1, upper-latin) "." counter(h2) "." counter(h3) ".";
+	display: inline-block;
+	margin-right: 4pt;
+}
+
+header + p {
+	margin-top: 2em;
+}
+
+header p {
+	text-indent: 0;
+	line-height: 1;
+}
+
+#chapter {
+	font-style: italic;
+	text-align: right;
+	font-size: 16pt;
+}
+
+#title {
+	font-family: var(--font-family--title);
+	font-size: 36pt;
+	text-indent: 0;
+	text-align: right;
+}
+
+p[data-statement] {
+	text-indent: 0;
+}
+
+p[data-statement]::before {
+	counter-increment: statement;
+	content: attr(data-statement) " " var(--chapter-number) "." counter(statement) ".";
+	font-weight: bold;
+	display: inline-block;
+	margin-right: 4pt;
+	text-transform: capitalize;
+}
+
+blockquote {
+	background-color: lightgray;
+	margin-block: 0;
+	margin-inline: 0;
+	padding: .25em .5em;
+}
+
+@page {
+	@top-left {
+		content: var(--title);
+		font-family: var(--font-family--title);
+		font-weight: bold;
+		border-bottom: 1px solid black;
+		height: fit-content;
+		margin-bottom: 1em;
+	}
+
+	@top-right {
+		content: var(--chapter);
+		font-style: italic;
+		border-bottom: 1px solid black;
+		height: fit-content;
+		margin-bottom: 1em;
+	}
+}
+
+@page :first {
+	@top-left {
+		content: "";
+		border-bottom: none;
+	}
+
+	@top-right {
+		content: "";
+		border-bottom: none;
+	}
+}

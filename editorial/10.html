@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Problemset</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- MATHJAX -->
+	<script src="../src/js/mathjax-options.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../src/css/main.css">
+	<link rel="stylesheet" href="../src/css/problemset.css">
+	<link rel="stylesheet" href="../src/css/editorial.css">
+	<style>
+		:root {
+			--meeting-number: "Pertemuan 13";
+			--question-count: "9 butir";
+			--time: "30 menit";
+			--problemset-number: "Latihan 10";
+			--date: "16 Januari 2026";
+		}
+	</style>
+
+	<!-- JS -->
+	<script src="../src/js/problemset.js" defer></script>
+</head>
+<body>
+	<header>
+		<p class="number" id="meeting-number"></p>
+		<table>
+			<tr>
+				<td>Jumlah Soal</td><td id="question-count"></td>
+				<td>Nama</td><td>Zafran Prayata Wiza</td>
+			</tr>
+			<tr>
+				<td>Waktu Pengerjaan</td><td id="time"></td>
+				<td>Kelas</td><td>X.8</td>
+			</tr>
+		</table>
+	</header>
+
+	<h1>Soal 1–3<br>Lampu LED</h1>
+
+	<section class="question-wrapper">
+		<p class="question">Perhatikan beberapa contoh susunan lampu berikut. Manakah saja dari deretan lampu berikut yang sudah rapi?</p>
+
+		<ul class="cmcq">
+			<li>MBBMB</li>
+			<li>MMM</li>
+			<li answer>BMBM</li>
+			<li>BBMMBBMMBBMM</li>
+			<li answer>B</li>
+		</ul>
+	</section>
+
+	<p>Lampu harus selang-seling, antara MBMB… atau BMBM…. Jika panjang susunan 1, maka dapat dipastikan susuan tersebut rapi.</p>
+
+	<section class="question-wrapper">
+		<p class="question">Diberikan urutan lampu $$\text{BMMBBBMMMMBBBBBMMMMMMBBBBBBBMMMMMMMM},$$ ada berapa banyak lampu yang harus dimatikan agar susunan lampu tersebut rapi?</p>
+
+		<p class="answer">28</p>
+	</section>
+
+	<p>Pola barisan tersebut adalah 1 biru, 2 merah, 3 biru, …, 8 merah. Mulai dari kelompok kedua (2 merah), matikan 1 lampu. Untuk kelompok ketiga, matikan 2 lampu. Begitu seterusnya. Diperoleh total lampu yang perlu dimatikan adalah $1 + 2 + \cdots + 7 = 28$ lampu.</p>
+
+	<section class="question-wrapper">
+		<p class="question">Diberikan urutan lampu $$\text{BMMBBBMMMMBBBBBMMMMMMBBBBBBBMMMMMMMM},$$ ada berapa banyak cara mematikan lampu agar susunan lampu tersebut rapi dengan mematikan lampu sesedikit mungkin?</p>
+
+		<p class="answer">$\pu{40320}$</p>
+	</section>
+
+	<p>(Barisan sama dengan Soal 2). Untuk kelompok kedua, ada $\binom{2}{1}$ cara mematikan lampu. Kelompok ketiga ada $\binom{3}{2}$ cara. Kelompok ke-$8$ ada $\binom{8}{7}$ cara.</p>
+
+	<p>Perhatikan bahwa $\displaystyle\binom{i}{i-1} = \frac{i!}{(i-1)! \times 1!} = i$. Maka keseluruhan cara ada $2 \times 3 \times \cdots \times 8 = 8! = \pu{40320}$</p>
+
+	<p class="footnote">
+		$\binom{a}{b}$ melambangkan koefisien binomial, atau kombinasi $b$ dari $a$.
+	</p>
+
+	<h1>Soal 4–6<br>Menjelang Ujian TKA</h1>
+
+	<p>Terdapat sistem keamanan dengan kode rahasia $p$ dan $q$. Nilai $\operatorname{kpk}(p, q) = X$ dan $\operatorname{fpb}(p, q) = Y$ untuk suatu bilangan $X$ dan $Y$ yang akan ditentukan.</p>
+
+	<section class="question-wrapper">
+		<p class="question">Diketahui $X = Y$, ada berapa banyak pasangan $(p, q)$ yang mungkin?</p>
+
+		<p class="answer">1</p>
+	</section>
+
+	<p>Hanya ada satu pasangan, yaitu jika $p = q$.</p>
+
+	<section class="question-wrapper">
+		<p class="question">Diketahui $X = 10!$ dan $Y = 2026$. Ada berapa banyak pasangan $(p, q)$ yang mungkin?</p>
+
+		<p class="answer">0</p>
+	</section>
+
+	<p>Perhatikan bahwa untuk suatu bilangan asli $p$ dan $q$, $\operatorname{fpb}(p, q)$ harus habis membagi $\operatorname{kpk}(p, q)$. Karena $Y$ tidak habis membagi $X$, maka tidak ada pasangan $(p, q)$ yang mungkin.</p>
+
+	<section class="question-wrapper">
+		<p class="question">Diketahui $Y = 2026$. Tentukan nilai $X$ terkecil sehingga banyaknya pasangan $(p, q)$ lebih dari 10.</p>
+
+		<p class="answer">$\pu{425460}$</p>
+	</section>
+
+	<p>Diketahui dari hubungan fpb dan kpk bahwa $pq = XY$. Definisikan $p = aY$ dan $q = bY$ dengan $\operatorname{fpb}(a, b) = 1$. Dari sini, kita mendapat $X = abY$.</p>
+
+	<p>Banyak pasangan $(p, q)$ yang memenuhi ditentukan oleh banyak faktor prima berbeda dari $\displaystyle\frac{\operatorname{kpk}(p, q)}{\operatorname{fpb}(p, q)} = \frac X Y = ab$. Misalkan $k = ab$ yang memiliki faktorisasi prima $k = p_1^{e_1} p_2^{e_2} \cdots p_n^{e_n}$, maka banyak cara membagi $k$ menjadi pasangan $(a, b)$ adalah $2^n$ dengan $n$ adalah banyak faktor prima <em>berbeda</em> dari $k$.</p>
+
+	<p>Banyak pasangan $(p, q)$ harus lebih besar dari 10. Maka $2^n > 10$. Nilai $n$ terkecil yang memenuhi adalah $n = 4$. Dari sini diperoleh $k$ terkecil adalah $2 \times 3 \times 5 \times 7 = 210$. Maka $X = kY = 210 \times 2026 = \pu{425460}$</p>
+
+	<h1>Soal 7–9<br>Pesan Terenkripsi</h1>
+
+	<p>Diberikan sebuah pesan terenkripsi $t$ yang dihasilkan dari pesan asli $s$. Setiap huruf pada $s$ diganti dengan satu huruf berikutnya searah jarum jam dalam sebuah lingkaran 26 huruf. Tentukan kembali pesan asli $s$ yang valid berdasarkan aturan tersebut. Pilih jawaban dengan leksikografis paling kecil.</p>
+
+	<section class="question-wrapper">
+		<p class="question">$t = \texttt{c}$</p>
+
+		<p class="answer">$\texttt{a}$</p>
+	</section>
+
+	<p>Salah satu lingkaran yang mugkin adalah $[\dots, \texttt{a}, \texttt{c}, \dots]$.</p>
+
+	<section class="question-wrapper">
+		<p class="question">$t = \texttt{ab}$</p>
+
+		<p class="answer">$\texttt{bc}$</p>
+	</section>
+
+	<p>Huruf $\texttt{b}$ menjadi $\texttt{a}$, sehingga lingkaran menjadi $[\dots, \texttt{b}, \texttt{a}, \dots]$. Namun huruf $\texttt{a}$ tidak bisa menjadi $\texttt{b}$. Huruf <em>terkecil</em> yang dapat dipakai adalah $\texttt{c}$ sehingga lingkaran menjadi $[\dots, \texttt{c}, \texttt{b}, \texttt{a}, \dots]$</p>
+
+	<section class="question-wrapper">
+		<p class="question">$t = \texttt{dcbaxyz}$</p>
+
+		<p class="answer">$\texttt{abdecfg}$</p>
+	</section>
+
+	<p>Susunan yang memenuhi adalah $[\dots, \texttt{e}, \texttt{a}, \texttt{d}, \texttt{b}, \texttt{c}, \texttt{x}, \texttt{f}, \texttt{y}, \texttt{g}, \texttt{z} \dots]$. Sehingga $s$ terkecil adalah $\texttt{abdecfg}$.</p>
+</body>
+</html>
