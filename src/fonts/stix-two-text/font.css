@@ -1,0 +1,55 @@
+@font-face {
+    font-family: "STIX Two Text";
+    src: url("400norm.woff2") format('woff2');
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "STIX Two Text";
+    src: url("400ital.woff2") format('woff2');
+    font-style: italic;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "STIX Two Text";
+    src: url("500norm.woff2") format('woff2');
+    font-style: normal;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "STIX Two Text";
+    src: url("500ital.woff2") format('woff2');
+    font-style: italic;
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "STIX Two Text";
+    src: url("600norm.woff2") format('woff2');
+    font-style: normal;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "STIX Two Text";
+    src: url("600ital.woff2") format('woff2');
+    font-style: italic;
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "STIX Two Text";
+    src: url("700norm.woff2") format('woff2');
+    font-style: normal;
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "STIX Two Text";
+    src: url("700ital.woff2") format('woff2');
+    font-style: italic;
+    font-weight: 700;
+}

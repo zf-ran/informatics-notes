@@ -1,3 +1,6 @@
+@import url("fonts/stix-two-text/font.css");
+@import url("fonts/latin-modern-mono/font.css");
+
 :root {
 	--font-family--body: "STIX Two Text";
 	--font-family--heading: var(--font-family--body);

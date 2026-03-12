@@ -10,7 +10,7 @@
 	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
 
 	<!-- CSS -->
-	<link rel="stylesheet" href="../src/css/main.css">
+	<link rel="stylesheet" href="../src/main.css">
 	<link rel="stylesheet" href="../src/css/material.css">
 	<style>
 		:root {
@@ -52,10 +52,8 @@ vector&lt;Activity&gt; activity_selection(vector&lt;Activity&gt;& activities) {
 	sort(activities.begin(), activities.end(), compare_activity);
 
 	vector&lt;Activity&gt; chosen;
+	chosen.push_back(activities[0]);
 
-	
-
-	
 	int time = activities[0].finish;
 
 	for (int i = 1; i &lt; activities.size(); i++) {

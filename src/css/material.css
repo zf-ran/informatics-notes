@@ -1,3 +1,5 @@
+@import url("../fonts/helvetica-condensed/font.css");
+
 :root {
 	--font-family--title: "Helvetica Condensed";
 }
@@ -88,6 +90,10 @@ blockquote {
 		border-bottom: 1px solid black;
 		height: fit-content;
 		margin-bottom: 1em;
+	}
+
+	@bottom-right {
+		content: counter(page);
 	}
 }
 
