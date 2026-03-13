@@ -1,0 +1,98 @@
+@import url("../fonts/helvetica-condensed/font.css");
+
+:root {
+	--font-family--heading: "Helvetica Condensed";
+
+	--page--margin-top: 3em;
+	--page--margin-bottom: 3em;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+h1 {
+	font-size: 2em;
+	font-family: var(--font-family--heading);
+	margin-top: 0;
+	margin-bottom: .5em;
+}
+
+p {
+	font-size: 1em;
+	text-indent: 0;
+	margin-block: .5em;
+}
+
+/* One section represents one slide */
+section {
+	page-break-after: always;
+	page-break-inside: avoid;
+	break-inside: avoid;
+}
+
+section.cover {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: right;
+	line-height: 1;
+}
+
+.title {
+	font-size: 2.5em;
+	font-weight: bold;
+}
+
+.subtitle {
+	font-size: 1.5em;
+	font-family: var(--font-family--heading);
+}
+
+@media print {
+	html {
+		font-size: 40px;
+	}
+
+	section {
+		height: 100vh;
+	}
+}
+
+@page :first {
+	counter-reset: page;
+	margin-top: var(--page--margin-top);
+	margin-bottom: var(--page--margin-top);
+
+	@bottom-left {
+		content: none;
+	}
+
+	@bottom-right {
+		content: none;
+	}
+}
+
+@page {
+	size: 1920px 1080px;
+
+	margin-top: var(--page--margin-top);
+	margin-bottom: var(--page--margin-bottom);
+
+	margin-left: 6.75em;
+	margin-right: 6.75em;
+
+	@bottom-left {
+		content: var(--title);
+		font-family: var(--font-family--heading);
+		border-top: 2.5px solid black;
+		height: fit-content;
+		margin-top: 1em;
+	}
+
+	@bottom-right {
+		content: counter(page);
+		border-top: 2.5px solid black;
+	}
+}
