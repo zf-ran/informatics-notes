@@ -8,15 +8,18 @@ Koleksi materi, latihan, dan solusi latihan untuk pelatihan persiapan OSN 2026 T
 	- Berisi rangkuman materi-materi.
 - [problemsets/](problemsets/)
 	- Latihan-latihan seiring waktu.
-- [editorial/](editorial/)
+- [editorials/](editorials/)
 	- Solusi latihan.
+- [slides/](slides/)
+	- *Slide* untuk presentasi.
 
 ## Menambah Dokumen Baru
 
 - Salin *template* yang sesuai:
   - Materi: [materials/!TEMPLATE.html](materials/!TEMPLATE.html)
   - Latihan: [problemsets/!TEMPLATE.html](problemsets/!TEMPLATE.html)
-  - Solusi latihan: [editorial/!TEMPLATE.html](editorial/!TEMPLATE.html)
+  - Solusi latihan: [editorials/!TEMPLATE.html](editorials/!TEMPLATE.html)
+  - *Slide* presentasi: [slides/!TEMPLATE.html](slides/!TEMPLATE.html)
 - Sesuaikan *metadata* di `<style>`, misal untuk soal latihan:
 	```css
 	:root {
