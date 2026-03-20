@@ -1,0 +1,30 @@
+{
+  "name": "informatics-notes",
+  "version": "1.0.0",
+  "description": "Peladen NodeJS untuk catatan, latihan, dan solusi latihan pembelajaran persiapan OSN 2026 Tim Olimpiade Informatika MAN 2 Kota Pekanbaru.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zf-ran/informatics-notes.git"
+  },
+  "keywords": [
+    "informatics",
+    "notes"
+  ],
+  "author": "Zafran",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zf-ran/informatics-notes/issues"
+  },
+  "homepage": "https://github.com/zf-ran/informatics-notes#readme",
+  "dependencies": {
+    "ejs": "^5.0.1",
+    "express": "^5.2.1",
+    "gray-matter": "^4.0.3",
+    "marked": "^17.0.4",
+    "path": "^0.12.7"
+  }
+}

@@ -2,36 +2,72 @@
 
 Koleksi materi, latihan, dan solusi latihan untuk pelatihan persiapan OSN 2026 Tim Olimpiade Informatika MAN 2 Kota Pekanbaru.
 
+Peladen NodeJS dengan [Marked.js](https://marked.js.org/) untuk merender HTML.
+
+## Instalasi dan Menjalankan
+
+1. Pastikan NodeJS terinstal (versi 16+).
+2. Klon atau unduh repositori ini.
+	- `git clone https://github.com/zf-ran/informatics-notes`
+3. Jalankan `npm install` untuk instal dependensi.
+4. Jalankan `npm start` untuk menjalankan peladen di [localhost:8080](https://localhost:8080/).
+
+## Struktur
+
+```
+./
+├── index.js              <- Kode utama
+├── package.json
+├── LICENSE
+├── LICENSE-CONTENT
+├── README.md
+├── config/               <- Konfigurasi Marked.js
+│   ├── marked.js
+│   ├── marked/
+│   │   ├── base.js
+│   │   ├── materials.js
+│   │   ├── problemsets.js
+│   │   └── slides.js
+├── contents/             <- Konten utama
+│   ├── materials/
+│   ├── problemsets/
+│   ├── editorials/
+│   └── slides/
+├── public/               <- Aset statis: CSS, JS, dan font
+└── views/                <- Templat EJS
+```
+
 ## Daftar Isi
 
-- [materials/](materials/)
+Isi terletak pada folder [contents/](contents/):
+
+- [materials/](contents/materials/)
 	- Berisi rangkuman materi-materi.
-- [problemsets/](problemsets/)
+- [problemsets/](contents/problemsets/)
 	- Latihan-latihan seiring waktu.
-- [editorials/](editorials/)
+- [editorials/](contents/editorials/)
 	- Solusi latihan.
-- [slides/](slides/)
+	- *Styling* dan *script* pada *editorials* sama dengan *problemsets*.
+- [slides/](contents/slides/)
 	- *Slide* untuk presentasi.
 
 ## Menambah Dokumen Baru
 
-- Salin *template* yang sesuai:
-  - Materi: [materials/!TEMPLATE.html](materials/!TEMPLATE.html)
-  - Latihan: [problemsets/!TEMPLATE.html](problemsets/!TEMPLATE.html)
-  - Solusi latihan: [editorials/!TEMPLATE.html](editorials/!TEMPLATE.html)
-  - *Slide* presentasi: [slides/!TEMPLATE.html](slides/!TEMPLATE.html)
-- Sesuaikan *metadata* di `<style>`, misal untuk soal latihan:
-	```css
-	:root {
-		--meeting-number;
-		--question-count;
-		--time;
-		--problemset-number;
-		--date;
-	}
-	```
-- Lalu tulis sesuai semantik HTML yang sesuai.
+Dokumen-dokumen ditulis dengan Markdown yang telah dimodifikasi.
+
+- Pertama-tama, isi *frontmatter* yang sesuai.
+- Panduan menulis dan sintaks-sintaks khusus terletak pada README masing-masing folder.
+- Pastikan untuk menggunakan bahasa yang formal, mudah dimengerti, dan tidak multitafsir!
 
 ## *Math Rendering*
 
-**MathJax** dikonfigurasi di [src/js/mathjax-options.js](src/js/mathjax-options.js) dan dimuat dari CDN di setiap halaman.
+**MathJax** dikonfigurasi di [public/js/mathjax-options.js](public/js/mathjax-options.js) dan dimuat dari CDN di setiap halaman.
+
+## Lisensi
+
+Proyek ini menggunakan ***dual license***:
+
+- **Kode** (`index.js`, CSS, JS, konfigurasi): [MIT License](LICENSE)
+	- Bebas digunakan, dimodifikasi, dan didistribusikan untuk tujuan komersial dan non-komersial.
+- **Konten** (*materials*, *problemsets*, *editorials*, dan *slides*): [CC-BY 4.0](LICENSE-CONTENT)
+	- Bebas digunakan dan dimodifikasi dengan syarat **memberikan atribusi/kredit**.

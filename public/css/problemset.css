@@ -35,31 +35,16 @@ p.question::before {
 	font-weight: bold;
 }
 
-ol.mcq {
-	list-style-type: none;
-	counter-reset: mcq;
-}
-
-ol.mcq li {
-	position: relative;
-}
-
-ol.mcq li::before {
-	counter-increment: mcq;
-	content: "(" counter(mcq, upper-latin) ")";
-	position: absolute;
-	left: -4pt;
-	transform: translateX(-100%);
-}
-
-ul.cmcq {
+ul.mcq, ul.cmcq {
 	list-style-type: none;
 }
 
+ul.mcq li,
 ul.cmcq li {
 	position: relative;
 }
 
+ul.mcq li::before,
 ul.cmcq li::before {
 	content: "";
 	position: absolute;
@@ -70,8 +55,12 @@ ul.cmcq li::before {
 	transform: translateX(-100%);
 	align-self: center;
 }
+ul.mcq li::before {
+	border-radius: 50%;
+}
 
-ul.cmcq li[answer]::before {
+ul.mcq li.answer::before,
+ul.cmcq li.answer::before {
 	background-color: black;
 }
 
@@ -123,7 +112,7 @@ header td:nth-child(2) {
 	}
 
 	@bottom-left {
-		content: var(--problemset-number);
+		content: var(--problemset-title);
 		font-weight: bold;
 		border-top: 1px solid black;
 		height: fit-content;

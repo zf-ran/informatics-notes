@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Solusi <%- problemsetTitle %></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- MATHJAX -->
+	<script src="/js/mathjax-options.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="/main.css">
+	<link rel="stylesheet" href="/css/problemset.css">
+	<link rel="stylesheet" href="/css/editorial.css">
+	<style>
+		:root {
+			--problemset-title: "<%- problemsetTitle %>";
+			--date: "<%- date %>";
+			--meeting-number: "Pertemuan <%- meetingNumber %>";
+			--question-count: "<%- questionCount %> butir";
+			--time: "<%- time %>";
+		}
+	</style>
+
+	<!-- JS -->
+	<script src="/js/problemset.js" defer></script>
+</head>
+<body>
+	<header>
+		<p class="number" id="meeting-number">Pertemuan <%= meetingNumber %></p>
+		<table>
+			<tr>
+				<td>Jumlah Soal</td><td id="question-count"><%= questionCount %> butir</td>
+				<td>Nama</td><td><%= solver %></td>
+			</tr>
+			<tr>
+				<td>Waktu Pengerjaan</td><td id="time"><%= time %></td>
+				<td>Kelas</td><td><%= solverClass %></td>
+			</tr>
+		</table>
+	</header>
+
+	<%- content %>
+</body>
+</body>
+</html>
