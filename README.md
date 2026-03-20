@@ -59,6 +59,35 @@ Dokumen-dokumen ditulis dengan Markdown yang telah dimodifikasi.
 - Panduan menulis dan sintaks-sintaks khusus terletak pada README masing-masing folder.
 - Pastikan untuk menggunakan bahasa yang formal, mudah dimengerti, dan tidak multitafsir!
 
+## Render/Cetak
+
+Gunakan peramban **berbasis Chromium** agar mendapat fitur yang dibutuhkan!
+
+Seperti:
+
+- Chrome
+- Vivaldi
+- Edge
+- Brave
+
+**Jangan gunakan Firefox** untuk merender PDF!
+
+## Spesifikasi Pesan *Commit*
+
+### Modifikasi Konten
+
+README termasuk pada bagian ini.
+
+- `add:` Menambah dokumen baru.
+- `edit:` Menyunting dokumen yang sudah ada.
+- `del:` Menghapus dokumen.
+
+### Modifikasi Kode
+
+- `feat:` Menambah fitur baru.
+- `ref:` Refaktor kode.
+- `fix:` Memperbaiki bug.
+
 ## *Math Rendering*
 
 **MathJax** dikonfigurasi di [public/js/mathjax-options.js](public/js/mathjax-options.js) dan dimuat dari CDN di setiap halaman.
