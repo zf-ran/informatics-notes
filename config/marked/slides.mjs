@@ -1,5 +1,5 @@
 import { Marked } from 'marked';
-import { markedRenderer, footnote } from './base.js';
+import { markedRenderer, footnote } from './base.mjs';
 
 export function markedSlides() {
 	const instance = new Marked();

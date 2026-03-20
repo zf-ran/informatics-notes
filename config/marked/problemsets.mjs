@@ -1,5 +1,5 @@
 import { Marked, marked } from 'marked';
-import { markedRenderer, footnote } from './base.js';
+import { markedRenderer, footnote } from './base.mjs';
 
 const question = {
 	name: 'question',

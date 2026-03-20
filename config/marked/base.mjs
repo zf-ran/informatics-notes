@@ -1,4 +1,4 @@
-import { escapeHTML } from '../util.js';
+import { escapeHTML } from '../util.mjs';
 import { marked } from 'marked';
 
 export const markedRenderer = {

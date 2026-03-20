@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-const { marked: renderers } = require('./config/marked.js');
+const { marked: renderers } = require('./config/marked.mjs');
 
 const matter = require('gray-matter');
 
