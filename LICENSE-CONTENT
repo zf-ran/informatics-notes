@@ -14,8 +14,4 @@ Under the following terms:
 - Attribution: You must give appropriate credit, provide a link to the license, 
   and indicate if changes were made.
 
-This license applies to all content in:
-- [materials/](materials/) (educational materials).
-- [problemsets/](problemsets/) (problem sets and exercises).
-- [editorials/](editorials/) (editorial solutions).
-- [slides/](slides/) (presentation slides).
+This license applies to all content in the folder `contents/`.

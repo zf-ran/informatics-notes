@@ -2,11 +2,11 @@
 
 Koleksi materi, latihan, dan solusi latihan untuk pelatihan persiapan OSN 2026 Tim Olimpiade Informatika MAN 2 Kota Pekanbaru.
 
-Peladen NodeJS dengan [Marked.js](https://marked.js.org/) untuk merender HTML.
+Peladen Node.js dengan [Marked.js](https://marked.js.org/) untuk merender HTML.
 
 ## Instalasi dan Menjalankan
 
-1. Pastikan NodeJS terinstal (versi 16+).
+1. Pastikan Node.js terinstal (versi 16+).
 2. Klon atau unduh repositori ini.
 	- `git clone https://github.com/zf-ran/informatics-notes`
 3. Jalankan `npm install` untuk instal dependensi.
@@ -96,7 +96,7 @@ README termasuk pada bagian ini.
 
 Proyek ini menggunakan ***dual license***:
 
-- **Kode** (`index.js`, CSS, JS, konfigurasi): [MIT License](LICENSE)
+- **Kode** ([index.js](index.js), CSS, JS, konfigurasi): [MIT License](LICENSE)
 	- Bebas digunakan, dimodifikasi, dan didistribusikan untuk tujuan komersial dan non-komersial.
-- **Konten** (*materials*, *problemsets*, *editorials*, dan *slides*): [CC-BY 4.0](LICENSE-CONTENT)
+- **Konten** ([*contents*](contents/)): [CC-BY 4.0](LICENSE-CONTENT)
 	- Bebas digunakan dan dimodifikasi dengan syarat **memberikan atribusi/kredit**.

@@ -1,4 +1,12 @@
-# *Frontmatter*
+# *Editorial*
+
+*Editorial* adalah dokumen solusi dan penjelasan dari soal-soal yang ada di [*problemsets*](/contents/problemsets).
+
+Gunakan nama *file* yang sama dengan *problemset* yang bersesuaian.
+
+Pada saat menjelaskan soal, gunakan bahasa yang formal dan mudah dipahami.
+
+## *Frontmatter*
 
 *Frontmatter* untuk *editorial* sama dengan *problemsets*, dengan penambahan berikut:
 
@@ -13,15 +21,15 @@ class: XXXX
 - `class`: **teks**
 	- Kelas/instansi kontributor solusi.
 
-# Isi
+## Isi
 
 Isi untuk *editorial* kurang lebih sama dengan *problemset*.
 
-## Pernyataan
+### Pernyataan (*Abridged Statement*)
 
 Untuk *abridged statement* (inti pokok soal), tuliskan dalam bentuk **paragraf biasa**.
 
-## Pertanyaan
+### Pertanyaan
 
 Untuk setiap soal, buatlah dalam bentuk
 
@@ -32,7 +40,7 @@ Untuk setiap soal, buatlah dalam bentuk
 > Jika ada paragraf kedua, letakkan di sini.
 ```
 
-## Jawaban
+### Jawaban
 
 Ada tiga tipe jawaban:
 
@@ -40,7 +48,7 @@ Ada tiga tipe jawaban:
 - Pilihan ganda.
 - Pilihan ganda kompleks.
 
-### Isian Singkat
+#### Isian Singkat
 
 Untuk isian singkat, tuliskan jawaban dalam bentuk
 
@@ -50,7 +58,7 @@ Untuk isian singkat, tuliskan jawaban dalam bentuk
 
 dalam *blockquote* yang **sama** dengan soal.
 
-### Pilihan ganda
+#### Pilihan Ganda
 
 Buat dalam bentuk *unordered list* dengan tambahan `( )` atau `(x)` untuk jawaban yang benar. Letakkan pada *blockquote* yang **sama** dengan soal.
 
@@ -62,7 +70,7 @@ Buat dalam bentuk *unordered list* dengan tambahan `( )` atau `(x)` untuk jawaba
 
 Pada contoh di atas, *Jawaban 3* adalah jawaban yang benar.
 
-### Pilihan ganda kompleks.
+#### Pilihan Ganda Kompleks
 
 Sama dengan pilihan ganda, namun menggunakan `[ ]` dan `[x]`, bukan `( )`. Letakkan pada *blockquote* yang **sama** dengan soal.
 
@@ -74,6 +82,6 @@ Sama dengan pilihan ganda, namun menggunakan `[ ]` dan `[x]`, bukan `( )`. Letak
 
 Pada contoh di atas, *Jawaban 1* dan *Jawaban 2* adalah jawaban-jawaban yang benar.
 
-## Penjelasan
+### Penjelasan
 
 Untuk penjelasan, tuliskan di bawah blok soal menggunakan **paragraf biasa**.

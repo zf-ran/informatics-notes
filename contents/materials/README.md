@@ -1,4 +1,10 @@
-# *Frontmatter*
+# *Material*
+
+*Material* adalah dokumen materi/bahan belajar untuk olimpiade informatika, pemrograman kompetitif, dan sebagainya.
+
+Dokumen ditulis layaknya sebuah buku yang memiliki bab.
+
+## *Frontmatter*
 
 *Frontmatter* untuk materi adalah
 
@@ -12,11 +18,11 @@ title: XX
 - `title`: **teks**
 	- Judul bab.
 
-# Isi
+## Isi
 
 Saat menulis materi, gunakan bahasa yang formal dan mudah dimengerti.
 
-## *Statement Block*
+### *Statement Block*
 
 *Statement block* adalah paragraf yang merupakan definisi, teorema, lemma, dan korolari.
 
@@ -38,10 +44,12 @@ Jika terdapat dua atau lebih paragraf pada blok yang sama, maka tulis seperti:
 > Terakhir, ini paragraf ketiga.
 ```
 
-## Kode
+### Kode
 
 Untuk menulis kode program, gunakan *codeblock*:
 
-	```cpp
-	// Kode disini
-	```
+````md
+```cpp
+// Kode disini
+```
+````

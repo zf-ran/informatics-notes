@@ -1,4 +1,8 @@
-# *Frontmatter*
+# *Problemset*
+
+*Problemset* adalah paket soal yang ditulis untuk persiapan olimpiade informatika.
+
+## *Frontmatter*
 
 *Frontmatter* untuk *problemset* adalah
 
@@ -22,9 +26,9 @@ time: XX jam YY menit
 - `date`: **teks**
 	- Tanggal *problemset* ini ditulis.
 
-# Isi
+## Isi
 
-## Judul Soal
+### Judul Soal
 
 Setiap tema soal, mulai dengan *heading* 1 dalam bentuk
 
@@ -34,7 +38,7 @@ Setiap tema soal, mulai dengan *heading* 1 dalam bentuk
 
 Jika judul soal tidak ada, **buatlah** judul yang dirasa sesuai dengan tema soal.
 
-## Pertanyaan
+### Pertanyaan
 
 Ada dua tipe pertanyaan:
 
@@ -57,10 +61,12 @@ Contoh soal benar/salah:
 
 ‘TOF’ adalah singkatan dari *true or false*.
 
-## Kode
+### Kode
 
 Untuk soal membaca koding, gunakan *codeblock*:
 
-	```cpp
-	// Kode disini
-	```
+````md
+```cpp
+// Kode disini
+```
+````
