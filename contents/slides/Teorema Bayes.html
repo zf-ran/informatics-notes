@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- MATHJAX -->
+	<script src="../src/js/mathjax-options.js"></script>
+	<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml.js"></script>
+
+	<!-- CSS -->
+	<link rel="stylesheet" href="../src/main.css">
+	<link rel="stylesheet" href="../src/css/slide.css">
+	<style>
+		:root {
+			--title: "Teorema Bayes";
+			--subtitle: "Klasifikasi menggunakan Naive Bayes";
+		}
+	</style>
+
+	<!-- JS -->
+	<script src="../src/js/slide.js" defer></script>
+</head>
+<body>
+	<section class="cover">
+		<div class="title" id="title"></div>
+		<div class="subtitle" id="subtitle"></div>
+	</section>
+
+	<section>
+		<h1>Dasar-Dasar Probabilitas</h1>
+
+		<ul>
+			<li>Misalkan kita melempar dua dadu 6 sisi yang <em>fair</em>$^\dagger$.</li>
+			<li><strong>Himpunan semesta</strong> (biasa ditulis $S$ atau $\Omega$) adalah segala kejadian yang mungkin.</li>
+			<li>Himpunan semesta pelemparan dua dadu adalah $$ \Omega = \{(1, 1), (1, 2), \dots, (1, 6), \dots, (6, 6)\}. $$</li>
+			<li>$|\Omega| = 36$.</li>
+		</ul>
+
+		<ul>
+			<li>Himpunan $A$ adalah kejadian kedua mata dadu yang muncul sama.</li>
+			<li>Himpunan $B$ adalah kejadian kedua mata dadu yang muncul genap.</li>
+			<li>Himpunan $A$ dan $B$ adalah himpunan bagian $\Omega$.</li>
+		</ul>
+
+		<p class="footnote">$^\dagger$<em>Fair</em> artinya setiap sisi dadu memiliki peluang yang sama untuk muncul.</p>
+	</section>
+
+	<section>
+		<h1>Dasar-Dasar Probabilitas</h1>
+
+		<ul>
+			<li>$P(A)$ adalah peluang terjadi kejadian $A$.</li>
+			<li>$P(A \mid B)$ adalah peluang terjadi kejadian $A$, diketahui kejadian $B$ terjadi. Biasa disebut “<em>$A$ given $B$</em>”.</li>
+			<li>$P(A \cap B)$ adalah peluang terjadi kejadian $A$ dan $B$ bersamaan (irisan).</li>
+			<li>Kejadian independen: $P(A \cap B) = P(A) \times P(B)$.</li>
+			<li>Kejadian dependen: $P(A \cap B) = P(A) \times P(B \mid A)$.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h1>Dasar Teorema Bayes$^\dagger$</h1>
+
+		<p>Dari diagram Venn: $\displaystyle P(A \mid B) = \frac{P(A \cap B)}{P(B)}$.</p>
+
+		<ul>
+			<li>Karena $P(A \cap B) = P(A) \times P(B \mid A)$, maka $$ \boxed{P(A \mid B) = \frac{P(A) \times P(B \mid A)}{P(B)}}. $$</li>
+		</ul>
+
+		<p class="footnote">$^\dagger$Bayes dibaca <em>beys</em>.</p>
+	</section>
+
+	<section>
+		<h1>Teorema Bayes</h1>
+
+		<p>Sekarang, anggap kita memiliki hipotesis dan data.</p>
+
+		<ul>
+			<li>$H$ adalah hipotesis.</li>
+			<li>$D$ adalah data yang kita miliki.</li>
+		</ul>
+
+		<p>Kita perlu mencari $P(H \mid D)$, yaitu peluang hipotesis kita benar, dengan data yang kita miliki. $$ P(H \mid D) = \frac{P(D \mid H) \times P(H)}{P(D)} $$</p>
+	</section>
+
+	<section>
+		<h1>Teorema Bayes</h1>
+
+		<ul>
+			<li>$P(H)$ adalah peluang hipotesis sebelum melihat data, disebut <strong><em>prior</em></strong>.</li>
+			<li>$P(H \mid D)$ adalah peluang yang perlu kita cari, peluang hipotesis setelah melihat data, disebut <strong><em>posterior</em></strong>.</li>
+			<li>$P(D \mid H)$ adalah peluang data terjadi pada hipotesis, disebut <strong><em>likelihood</em></strong>.</li>
+			<li>$P(D)$ adalah peluang data, disebut <strong><em>evidence</em></strong>.</li>
+		</ul>
+	</section>
+
+	<section>
+		<h1>Klasifikasi</h1>
+
+		<ul>
+			<li>$P(H)$ adalah peluang hipotesis sebelum melihat data, disebut <strong><em>prior</em></strong>.</li>
+			<li>$P(H \mid D)$ adalah peluang yang perlu kita cari, peluang hipotesis setelah melihat data, disebut <strong><em>posterior</em></strong>.</li>
+			<li>$P(D \mid H)$ adalah peluang data terjadi pada hipotesis, disebut <strong><em>likelihood</em></strong>.</li>
+			<li>$P(D)$ adalah peluang data, disebut <strong><em>evidence</em></strong>.</li>
+		</ul>
+	</section>
+</body>
+</html>

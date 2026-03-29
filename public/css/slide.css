@@ -1,7 +1,7 @@
 @import url("../fonts/helvetica-condensed/font.css");
 
 :root {
-	--font-family--heading: "Helvetica Condensed";
+	--font-family--title: "Helvetica Condensed";
 
 	--page--margin-top: 3em;
 	--page--margin-bottom: 3em;
@@ -14,15 +14,24 @@ body {
 
 h1 {
 	font-size: 2em;
-	font-family: var(--font-family--heading);
+	font-family: var(--font-family--title);
 	margin-top: 0;
 	margin-bottom: .5em;
+}
+
+h2 {
+	font-size: 1.2em;
+	font-weight: 600;
 }
 
 p {
 	font-size: 1em;
 	text-indent: 0;
 	margin-block: .5em;
+}
+
+p.footnote {
+	font-size: 0.875em;
 }
 
 /* One section represents one slide */
@@ -47,7 +56,7 @@ section.cover {
 
 .subtitle {
 	font-size: 1.5em;
-	font-family: var(--font-family--heading);
+	font-family: var(--font-family--title);
 }
 
 @media print {
@@ -85,7 +94,7 @@ section.cover {
 
 	@bottom-left {
 		content: var(--title);
-		font-family: var(--font-family--heading);
+		font-family: var(--font-family--title);
 		border-top: 2.5px solid black;
 		height: fit-content;
 		margin-top: 1em;
