@@ -1,5 +1,5 @@
 section.question-wrapper {
-	border: 1px solid black;
+	border: 1px solid currentcolor;
 	padding-inline: 4pt;
 	margin-block: 1em .5em;
 }

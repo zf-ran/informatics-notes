@@ -79,7 +79,7 @@ blockquote {
 		content: var(--title);
 		font-family: var(--font-family--title);
 		font-weight: bold;
-		border-bottom: 1px solid black;
+		border-bottom: 1px solid currentcolor;
 		height: fit-content;
 		margin-bottom: 1em;
 	}
@@ -87,7 +87,7 @@ blockquote {
 	@top-right {
 		content: var(--chapter);
 		font-style: italic;
-		border-bottom: 1px solid black;
+		border-bottom: 1px solid currentcolor;
 		height: fit-content;
 		margin-bottom: 1em;
 	}

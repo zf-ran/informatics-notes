@@ -95,13 +95,13 @@ section.cover {
 	@bottom-left {
 		content: var(--title);
 		font-family: var(--font-family--title);
-		border-top: 2.5px solid black;
+		border-top: 2.5px solid currentcolor;
 		height: fit-content;
 		margin-top: 1em;
 	}
 
 	@bottom-right {
 		content: counter(page);
-		border-top: 2.5px solid black;
+		border-top: 2.5px solid currentcolor;
 	}
 }

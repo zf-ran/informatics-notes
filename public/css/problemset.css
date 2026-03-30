@@ -50,7 +50,7 @@ ul.cmcq li::before {
 	position: absolute;
 	margin-right: 4pt;
 	width: 8px; height: 8px;
-	border: 1px solid black;
+	border: 1px solid currentcolor;
 	left: -4pt;
 	transform: translateX(-100%);
 	align-self: center;
@@ -61,7 +61,7 @@ ul.mcq li::before {
 
 ul.mcq li.answer::before,
 ul.cmcq li.answer::before {
-	background-color: black;
+	background-color: currentcolor;
 }
 
 header {
@@ -75,8 +75,8 @@ header .number {
 
 header table {
 	width: 100%;
-	border-top: 1px solid black;
-	border-bottom: 1px solid black;
+	border-top: 1px solid currentcolor;
+	border-bottom: 1px solid currentcolor;
 }
 
 header td:nth-child(2n+1) {
@@ -99,14 +99,14 @@ header td:nth-child(2) {
 @page {
 	@top-left {
 		content: var(--question-count);
-		border-bottom: 1px solid black;
+		border-bottom: 1px solid currentcolor;
 		height: fit-content;
 		margin-bottom: 1em;
 	}
 
 	@top-right {
 		content: var(--time);
-		border-bottom: 1px solid black;
+		border-bottom: 1px solid currentcolor;
 		height: fit-content;
 		margin-bottom: 1em;
 	}
@@ -114,21 +114,21 @@ header td:nth-child(2) {
 	@bottom-left {
 		content: var(--problemset-title);
 		font-weight: bold;
-		border-top: 1px solid black;
+		border-top: 1px solid currentcolor;
 		height: fit-content;
 		margin-top: 1em;
 	}
 
 	@bottom-center {
 		content: var(--date);
-		border-top: 1px solid black;
+		border-top: 1px solid currentcolor;
 		height: fit-content;
 		margin-top: 1em;
 	}
 
 	@bottom-right {
 		content: "Halaman " counter(page) " dari " counter(pages);
-		border-top: 1px solid black;
+		border-top: 1px solid currentcolor;
 		height: fit-content;
 		margin-top: 1em;
 	}
