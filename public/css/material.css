@@ -68,7 +68,7 @@ p[data-statement]::before {
 }
 
 blockquote {
-	background-color: lightgray;
+	background-color: hsl(from currentcolor h s l / 20%);
 	margin-block: 0;
 	margin-inline: 0;
 	padding: .25em .5em;
