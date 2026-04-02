@@ -107,6 +107,6 @@ vector<int> primes_up_to(int N) {
 
 # Faktor Bilangan
 
-> [!definisi] Misalkan $a$ dan $b$ adalah bilangan bulat dengan $a \neq 0$. Kita mengatakan bahwa $a$ adalah *faktor* dari $b$ jika dan hanya jika terdapat bilangan bulat $k$ sehingga $b = ka$. Dalam hal ini ditulis $a \mid b$ atau '$a$ habis membagi $b$.'
+> [!definisi] Misalkan $a$ dan $b$ adalah bilangan bulat dengan $a \neq 0$. Kita mengatakan bahwa $a$ adalah *faktor* dari $b$ jika dan hanya jika terdapat bilangan bulat $k$ sehingga $b = ka$. Dalam hal ini ditulis $a \mid b$ (disebut $a$ habis membagi $b$).
 
 Sebagai contoh, 5 adalah faktor dari 15, karena terdapat $k = 3$ sehingga $15 = 3(5)$. Namun, 6 bukanlah faktor dari 14, karena tidak ada bilangan bulat $k$ sehingga $14 = 6k$.
